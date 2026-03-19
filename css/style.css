@@ -1,0 +1,83 @@
+:root {
+    --bg-color: #0f1115;
+    --card-bg: #1a1d23;
+    --accent-purple: #6366f1;
+    --accent-neon: #a855f7;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 100px; /* Espacio para el botón de WhatsApp */
+}
+
+/* La imagen del proyecto */
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Oculta por defecto */
+    transform: scale(1.1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* La capa de transparencia con color */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(168, 85, 247, 0.9));
+       /* Transparencia inicial */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+/* Efecto Hover */
+.project-item:hover .project-img {
+    opacity: 1; /* Muestra la imagen */
+    transform: scale(1);
+}
+
+.project-item:hover .project-overlay {
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Se vuelve oscura abajo */
+    justify-content: flex-end; /* Mueve el texto hacia abajo */
+    align-items: flex-start;
+}
+
+.project-overlay h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.project-overlay p {
+    font-size: 1rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.padding-section {
+    padding: 0 10% 0px;
+}

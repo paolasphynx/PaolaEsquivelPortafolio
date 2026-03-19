@@ -1,0 +1,17 @@
+/* --- Grilla de Proyectos --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Grilla de 2 columnas */
+    gap: 20px;
+    padding: 0 10% 80px;
+}
+
+.project-item {
+    position: relative;
+    height: 400px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: var(--card-bg-glass);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+}

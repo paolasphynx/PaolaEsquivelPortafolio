@@ -1,0 +1,58 @@
+/* Contenedor Base (Unificado para Nav Nativo y Bootstrap) */
+nav, 
+.custom-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 1.5rem 10%;
+    background: rgba(15, 17, 21, 0.8) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad Safari */
+}
+
+/* Ajuste específico para la versión Bootstrap */
+.custom-nav {
+    padding: 1rem 0;
+}
+
+/* --- Logo & Identidad --- */
+.logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    
+    background: linear-gradient(90deg, #fff, var(--accent-neon));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Listas y Enlaces --- */
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0; /* Limpieza de márgenes por defecto */
+    padding: 0;
+}
+
+/* Estilo de Enlaces (Nativo y Bootstrap) */
+nav a, 
+.custom-nav .nav-link {
+    color: var(--text-muted) !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Estados Hover */
+nav a:hover, 
+.custom-nav .nav-link:hover {
+    color: var(--text-main) !important;
+}

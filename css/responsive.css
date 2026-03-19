@@ -1,0 +1,119 @@
+/* --- Tableta Grande / Laptops Pequeñas (1024px) --- */
+@media (max-width: 1024px) {
+    h1 { font-size: 3rem; }
+    .hero { gap: 2rem; }
+}
+
+/* --- Tablets / Menú Colapsable (991px) --- */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: var(--bg-color);
+        padding: 2rem;
+        border-radius: 20px;
+        margin-top: 1rem;
+        border: 1px solid var(--glass-border);
+    }
+}
+
+/* --- Móviles (768px) --- */
+@media (max-width: 768px) {
+    /* Navegación */
+    nav { padding: 1rem 5%; }
+    nav ul { gap: 1rem; font-size: 0.9rem; }
+
+    /* Hero Section */
+    .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .profile-blob { width: 300px; height: 300px; }
+    .profile-img { width: 280px; height: 280px; }
+
+    /* Grillas y Contenedores */
+    .projects-grid { grid-template-columns: 1fr; padding: 0 5% 50px; }
+    .project-item { height: 300px; }
+    .services-grid { padding: 0 5%; gap: 1.5rem; }
+    .swiper-container { padding: 2rem 5% 4rem; }
+    .padding-section { padding: 2rem 5% 4rem; }
+    
+    /* Formulario de Contacto */
+    .contact-container { padding: 2.5rem; }
+    .form-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .form-group.full { grid-column: span 1; }
+    .submit-btn { grid-column: span 1; padding: 1rem; }
+
+    /* Floating Button */
+    .whatsapp-float { padding: 12px 20px; font-size: 0.9rem; }
+}
+
+/* --- Móviles Pequeños (480px) --- */
+@media (max-width: 480px) {
+    nav ul { display: none; }
+    
+    .hero-content h1 { font-size: 2rem; }
+    .section-title { font-size: 2rem; margin: 4rem 0 2rem; }
+
+    .whatsapp-float {
+        padding: 15px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float span { display: none; }
+
+    a.submit-btn {
+        text-align: center;
+        line-height: 1;
+    }
+}
+
+/* --- Ajustes específicos para la página de Categoría --- */
+
+@media (max-width: 768px) {
+    .category-info {
+        flex-direction: column; /* Apila el título y el contador */
+        align-items: flex-start; /* Alinea todo a la izquierda */
+        gap: 1rem;
+        padding: 120px 5% 1.5rem; /* Menos padding en móvil */
+    }
+
+    .category-title h1 {
+        font-size: 2.8rem; /* Tamaño más manejable para móviles */
+    }
+
+    .category-hero {
+        padding: 120px 5% 40px;
+    }
+
+    /* Ajuste para la grilla de branding en móvil */
+    .branding-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        padding: 0 5% 60px;
+    }
+
+    .branding-item {
+        height: 350px; /* Reducimos un poco la altura para que no sea infinita en móvil */
+    }
+
+    /* Botón "Ver todas las categorías" */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 5%;
+    }
+
+    .submit-btn {
+        width: 100%; /* El botón ocupa todo el ancho en móvil */
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-title h1 {
+        font-size: 2.2rem;
+    }
+    
+    .category-counter {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,81 @@
+/* --- Formulario --- */
+.contact-section {
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(15, 17, 21, 0.5); /* Fondo ligero */
+}
+
+.contact-container {
+    background: var(--card-bg);
+    padding: 4rem; /* Aumentado el padding */
+    border-radius: 32px;
+    width: 100%;
+    max-width: 900px; /* Ligeramente más ancho */
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem; /* Aumentado el gap */
+    margin-top: 3rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+label {
+    color: var(--accent-purple);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, select, textarea {
+    background: #111418;
+    border: 1px solid #2d3139;
+    padding: 1.2rem;
+    border-radius: 14px;
+    color: white;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.1);
+}
+
+.submit-btn {
+    grid-column: span 2;
+    background: var(--accent-neon);
+    color: white;
+    padding: 1.3rem;
+    border: none;
+    border-radius: 100px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2);
+}

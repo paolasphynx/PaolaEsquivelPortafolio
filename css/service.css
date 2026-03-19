@@ -1,0 +1,61 @@
+/* --- Servicios --- */
+.section-title {
+    text-align: center;
+    margin: 6rem 0 4rem; /* Aumentado el margen superior */
+    font-size: 2.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ligeramente más ancho */
+    gap: 2rem; /* Aumentado el gap */
+    padding: 0 10%;
+}
+
+.service-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-neon);
+}
+
+.service-card i {
+    color: var(--accent-neon);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem; /* Ligeramente más grande */
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Para alinear el contenido */
+}
+
+.service-list {
+    list-style: none;
+    font-size: 0.85rem;
+    margin-top: auto; /* Empuja la lista al final */
+}
+
+.service-list li {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
