@@ -249,5 +249,31 @@
             },
         });
     </script>
+
+    <script>
+    // Función para detectar el scroll y activar animaciones
+    function reveal() {
+        var reveals = document.querySelectorAll(".service-card, .project-item, .contact-container, .section-title");
+        
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100; // Distancia antes de activarse
+            
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    // Inicializar clases de revelado
+    document.addEventListener("DOMContentLoaded", function() {
+        const elementsToAnimate = document.querySelectorAll(".service-card, .project-item, .contact-container, .section-title");
+        elementsToAnimate.forEach(el => el.classList.add("reveal"));
+        reveal(); // Ejecutar una vez por si ya hay elementos visibles
+    });
+
+    window.addEventListener("scroll", reveal);
+</script>
 </body>
 </html>
